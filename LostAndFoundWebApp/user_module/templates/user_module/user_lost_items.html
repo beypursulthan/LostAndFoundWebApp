@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Lost Items</title>
+</head>
+<body>
+    <h1>Your Lost Items</h1>
+    {% for user_lost_item in user_lost_items_list %}
+        <div>
+            <h2>{{ user_lost_item.item_name }}</h2>
+            <p>Description: {{ user_lost_item.description }}</p>
+            <p>Location: {{ user_lost_item.location }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>

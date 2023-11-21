@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Lost Item</title>
+</head>
+<body>
+    <h1>Delete Lost Item</h1>
+    <p>Are you sure you want to delete "{{ lost_item.item_name }}"?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>

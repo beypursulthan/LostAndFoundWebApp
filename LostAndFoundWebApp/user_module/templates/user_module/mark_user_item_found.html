@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mark Your Item as Found</title>
+</head>
+<body>
+    <h1>Mark Your Item as Found</h1>
+    <p>Are you sure you want to mark "{{ user_lost_item.item_name }}" as found?</p>
+    <form method="post">
+        {% csrf_token %}
+        {{ user_found_item_form.as_p }}
+        <button type="submit">Mark as Found</button>
+    </form>
+</body>
+</html>
